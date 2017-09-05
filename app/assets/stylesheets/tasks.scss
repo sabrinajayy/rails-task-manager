@@ -1,0 +1,93 @@
+// Place all the styles related to the tasks controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+body {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 14px;
+
+}
+
+h1 {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 60px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+h2 {
+  font-family: 'Caveat', cursive;
+  font-size: 50px;
+}
+
+ul {
+  list-style-type: none;
+  padding-left: 0px;
+}
+
+li {
+  list-style: none;
+
+}
+
+a {
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: bold;
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+.wrapper {
+  margin: 0 auto;
+  padding: 100px;
+  background-image: url();
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  width: 600px;
+  padding: 40px 5px;
+  background-color: #F4F4F4;
+}
+
+.content {
+
+}
+
+.btn {
+  background-color: #a500ff;
+  color: white;
+  text-transform: uppercase;
+  padding: 10px 15px;
+  font-size: 14px;
+  border-radius: 3px;
+  font-weight: bold;
+  opacity: 0.7;
+  margin-bottom: 20px;
+  &:hover {
+    opacity: 1;
+    color: white;
+  }
+}
+
+.notes {
+  font-size: 12px;
+  font-weight: 400;
+}
+
+.task {
+  font-weight: bold;
+}
+
+.delete {
+  color: red;
+  opacity: 0.7;
+  &:hover {
+    opacity: 1;
+    text-decoration: none;
+  }
+}
