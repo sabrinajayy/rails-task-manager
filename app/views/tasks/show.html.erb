@@ -6,6 +6,7 @@
                     <div class="content">
                         <h2><%= @task.name %></h2>
                         <p><%= @task.notes %></p>
+                        <p>status: <%= @status %></p>
                         <%=link_to "Edit", edit_task_path(@task), class: 'btn edit-btn' %>
                         <%= link_to "Delete", task_path(@task), class: 'btn delete-btn',
                 method: :delete,

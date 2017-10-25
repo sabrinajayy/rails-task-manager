@@ -5,6 +5,7 @@ class TasksController < ApplicationController
 
   def show
     @task = Task.find(params[:id])
+    @status = task_status(@task)
   end
 
   def edit
@@ -36,7 +37,23 @@ class TasksController < ApplicationController
     redirect_to tasks_path
   end
 
+  def complete_task
+  @task = Task.find(params[:id])
+  @task.mark_as_done
+
+  redirect_to tasks_path
+  end
+
   private
+
+  def task_status(task)
+    current_task = Task.find(task.id)
+    if current_task.complete?
+      "complete"
+    else
+      "not complete"
+    end
+  end
 
   def task_params
     params.require(:task).permit(:name, :notes)
