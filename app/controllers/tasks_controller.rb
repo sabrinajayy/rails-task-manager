@@ -1,6 +1,8 @@
 class TasksController < ApplicationController
   def index
     @tasks = Task.all
+    @uncomplete = Task.where(completed: false)
+    @completed = Task.where(completed: true)
   end
 
   def show
