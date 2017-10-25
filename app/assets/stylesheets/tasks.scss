@@ -40,22 +40,22 @@ a {
 
 .wrapper {
   margin: 0 auto;
-  padding: 100px;
+  padding: 40px;
   background-image: url();
 }
 
-.container {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin: 0 auto;
-  width: 600px;
-  padding: 40px 5px;
-  background-color: #F4F4F4;
-}
+// .container {
+//   display: flex;
+//   align-items: center;
+//   justify-content: center;
+//   margin: 0 auto;
+
+// }
 
 .content {
-
+  text-align: center;
+  padding: 40px;
+  background-color: #F4F4F4;
 }
 
 .btn {
@@ -89,5 +89,16 @@ a {
   &:hover {
     opacity: 1;
     text-decoration: none;
+  }
+}
+
+/*mobile devices*/
+@media screen and (max-width: 940px) {
+  .wrapper {
+    padding: 20px 5px;
+  }
+
+  h1 {
+    font-size: 42px;
   }
 }
