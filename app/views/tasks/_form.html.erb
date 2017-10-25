@@ -2,7 +2,7 @@
   <%= form_for(@task) do |f| %>
   <div class="task-title task-field">
     <%= f.label :name, 'Task Title' %>
-    <%= f.text_field :name %>
+    <%= f.text_field :name, required: true %>
     <br>
   </div>
   <div class="task-notes task-field">
