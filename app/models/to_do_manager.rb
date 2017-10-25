@@ -1,2 +1,0 @@
-class ToDoManager < ApplicationRecord
-end

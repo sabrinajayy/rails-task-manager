@@ -45,6 +45,7 @@ a {
 }
 
 .content {
+  margin: 20px 0px;
   text-align: center;
   padding: 40px;
   background-color: #F4F4F4;
@@ -69,6 +70,14 @@ a {
   }
 }
 
+.edit-btn {
+  background-color: #5BC0DE;
+}
+
+.delete-btn {
+  background-color: #e84343;
+}
+
 .notes {
   font-size: 12px;
   font-weight: 400;
@@ -76,6 +85,10 @@ a {
 
 .task {
   font-weight: bold;
+}
+
+.task-complete {
+  text-decoration: line-through;
 }
 
 .delete {
