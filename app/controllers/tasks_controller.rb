@@ -8,6 +8,7 @@ class TasksController < ApplicationController
   def show
     @task = Task.find(params[:id])
     @status = task_status(@task)
+    # @mark_done = complete_task(@task)
   end
 
   def edit
@@ -27,6 +28,7 @@ class TasksController < ApplicationController
 
   def update
     @task = Task.find(params[:id])
+    @task.completed = true
     @task.update(task_params)
 
     redirect_to task_path(@task)
@@ -39,9 +41,9 @@ class TasksController < ApplicationController
     redirect_to tasks_path
   end
 
-  def complete_task
-  @task = Task.find(params[:id])
-  @task.mark_as_done
+  def complete_task(task)
+  task_to_complete = Task.find(task.id)
+  task_to_complete.mark_as_done
 
   redirect_to tasks_path
   end
