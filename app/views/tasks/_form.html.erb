@@ -1,9 +1,18 @@
-<%= form_for(@task) do |f| %>
-  <%= f.label :name %>
-  <%= f.text_field :name %>
-  <br>
-  <%= f.label :notes %>
-  <%= f.text_field :notes %>
-  <br>
-  <%= f.submit %>
-<% end %>
+<div class="task-form">
+  <%= form_for(@task) do |f| %>
+  <div class="task-title task-field">
+    <%= f.label :name, 'Task Title' %>
+    <%= f.text_field :name %>
+    <br>
+  </div>
+  <div class="task-notes task-field">
+    <%= f.label :notes %>
+    <%= f.text_field :notes %>
+    <br>
+  </div>
+  <div class="task-field">
+    <%= f.submit :Submit, class: 'btn form-btn' %>
+  </div>
+
+  <% end %>
+</div>
