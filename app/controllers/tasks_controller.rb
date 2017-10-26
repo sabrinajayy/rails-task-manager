@@ -41,12 +41,23 @@ class TasksController < ApplicationController
     redirect_to tasks_path
   end
 
-  def complete_task(task)
-  task_to_complete = Task.find(task.id)
-  task_to_complete.mark_as_done
-
-  redirect_to tasks_path
+  def complete
+    params[:tasks_checkbox].each do |check|
+      task_id = check
+      t = Task.find_by_id(task_id)
+      t.update_attribute(:completed, true)
+      flash[:notice] = "Task completed"
+    end
+    redirect_to root_path
   end
+
+  # def complete_task(task)
+  # @task = Task.find(task.id)
+  # @task.mark_as_done
+  # @task.save
+
+  # redirect_to tasks_path
+  # end
 
   private
 

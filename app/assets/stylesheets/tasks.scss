@@ -46,7 +46,6 @@ a {
 
 .content {
   margin: 20px 0px;
-  text-align: center;
   padding: 40px;
   background-color: #F4F4F4;
   -webkit-box-shadow: 0px 2px 8px -3px rgba(117,117,117,1);
@@ -78,6 +77,22 @@ a {
   background-color: #e84343;
 }
 
+.mark-done-btn {
+  background-color: transparent;
+  border-color: #a500ff;
+  color: #a500ff;
+  border-radius: 3px;
+  font-size: 10px;
+  padding: 5px 10px;
+  text-transform: uppercase;
+  font-family: 'Open Sans', sans-serif;
+  letter-spacing: 1px;
+  margin-left: 10px;
+  &:hover {
+    color: white;
+    background-color: #a500ff;
+  }
+}
 .notes {
   font-size: 12px;
   font-weight: 400;
@@ -85,6 +100,7 @@ a {
 
 .task {
   font-weight: bold;
+  margin-top: 10px;
 }
 
 .task-complete {
@@ -98,6 +114,10 @@ a {
     opacity: 1;
     text-decoration: none;
   }
+}
+
+.new-task-btn {
+  margin-top: 20px;
 }
 
 /*form style*/
